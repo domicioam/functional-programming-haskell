@@ -50,3 +50,15 @@ inRange lower upper query = lower <= query && query <= upper
 
 betweenTenAndTwenty :: Int -> Bool
 betweenTenAndTwenty query = inRange 10 20 query
+
+my_sum :: Int -> Int
+my_sum 0 = 0
+my_sum n = n + my_sum (n - 1)
+
+-- lazy evaluation
+both :: Bool -> Bool -> Bool
+
+-- recursive functions
+sayAgain :: String -> Int -> String
+sayAgain _ 0 = ""
+sayAgain s i = s ++ sayAgain s (i - 1)
