@@ -26,3 +26,12 @@ fizzbuzz i
 
 tuples :: (Int, Int) -> Int
 tuples (a,b) = a + b
+
+area :: (Double, Double) -> Double
+area (a, b) = a * b
+
+perimeter :: (Double, Double) -> Double
+perimeter (a,b) = 2 * a + 2 * b
+
+areaAndPerimeter :: (Double, Double) -> (Double, Double)
+areaAndPerimeter tup = (area tup, perimeter tup)
