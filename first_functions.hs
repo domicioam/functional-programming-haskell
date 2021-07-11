@@ -23,3 +23,6 @@ fizzbuzz i
     | mod i 3 == 0 && mod i 5 /= 0 = "fizz"
     | mod i 3 == 0 && mod i 5 == 0 = "fizzbuzz"   
     | otherwise = show i
+
+tuples :: (Int, Int) -> Int
+tuples (a,b) = a + b
