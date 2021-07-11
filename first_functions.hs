@@ -35,3 +35,18 @@ perimeter (a,b) = 2 * a + 2 * b
 
 areaAndPerimeter :: (Double, Double) -> (Double, Double)
 areaAndPerimeter tup = (area tup, perimeter tup)
+
+ifThenElse :: (Bool, Int, Int) -> Int
+ifThenElse (b, t, f)
+    | b == True = t
+    | b == False = f
+
+divides :: Int -> Int -> Bool
+divides a b = mod b a == 0
+
+-- currying with partial application
+inRange :: Int -> Int -> Int -> Bool
+inRange lower upper query = lower <= query && query <= upper
+
+betweenTenAndTwenty :: Int -> Bool
+betweenTenAndTwenty query = inRange 10 20 query
